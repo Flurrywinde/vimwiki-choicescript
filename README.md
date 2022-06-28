@@ -3,7 +3,13 @@ Adds choicescript syntax highlighting to vimwiki {{{cs ... }}} sections
 
 Currently doing this via:
 
+
 * In syntax/choicescript.vim: add a non-CS section
+
+" Custom: vimwiki non-choicescript areas
+syntax region nonCS start="^}}}" end="^{{{cs" fold contains=csComment
+hi def nonCS guifg=LightBlue gui=italic font='Iosevka Term SS10 Thin Oblique'
+
 * Add <space>cs that changes the filetype to choicescript (in vimrc, I think)
 * More?
   
